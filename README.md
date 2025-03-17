@@ -44,7 +44,7 @@
    ```sh
    git clone https://github.com/motomasMINO/MP3MusicPlayer-Java.git
 
-   cd MP3AudioPlayer-Java
+   cd MP3MusicPlayer-Java
 3. **コンパイル & 実行**
    ```sh
    javac -cp "lib/*" -d out src/*.java
