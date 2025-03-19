@@ -45,10 +45,8 @@ Java Swingを使用したシンプルで直感的なMP3ミュージックプレ�
    git clone https://github.com/motomasMINO/MP3MusicPlayer-Java.git
 
    cd MP3MusicPlayer-Java
-3. **コンパイル & 実行**
+3. **アプリ起動**
    ```sh
-   javac -cp "lib/*" -d out src/*.java
-
    java -cp "out;lib/*" App
    ```
    ✅ Mac/Linux の場合: out;lib/* → "out:lib/*" に変更
