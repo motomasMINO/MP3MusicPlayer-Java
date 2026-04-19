@@ -8,6 +8,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.util.ArrayList;
 
+// プレイリストを作成するためのダイアログクラス
 public class MusicPlaylistDialog extends JDialog {
     private MusicPlayerGUI musicPlayerGUI;
 

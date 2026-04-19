@@ -1,0 +1,7 @@
+C:\Users\yu150\OneDrive\デスクトップ\Java\オーディオアプリ\src\assets\AquaticAmbience.mp3
+C:\Users\yu150\OneDrive\デスクトップ\Java\オーディオアプリ\src\assets\NOKIA.mp3
+C:\Users\yu150\OneDrive\デスクトップ\Java\オーディオアプリ\src\assets\SONY.mp3
+C:\Users\yu150\OneDrive\デスクトップ\Java\オーディオアプリ\src\assets\HUAWEI.mp3
+C:\Users\yu150\OneDrive\デスクトップ\Java\オーディオアプリ\src\assets\realme.mp3
+C:\Users\yu150\OneDrive\デスクトップ\Java\オーディオアプリ\src\assets\Xiaomi.mp3
+C:\Users\yu150\OneDrive\デスクトップ\Java\オーディオアプリ\src\assets\razr_v3_original.mp3

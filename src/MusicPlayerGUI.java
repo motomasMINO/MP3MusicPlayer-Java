@@ -10,6 +10,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.util.Hashtable;
 
+// 音楽プレーヤーのGUIを構築するクラス
 public class MusicPlayerGUI extends JFrame {
     // 色を設定
     public static final Color FRAME_COLOR = Color.GREEN;
@@ -59,6 +60,7 @@ public class MusicPlayerGUI extends JFrame {
         addGuiComponents();
     }
 
+    // GUIのコンポーネントを追加
     private void addGuiComponents() {
         // ツールバーを追加
         addToolbar();
@@ -122,6 +124,7 @@ public class MusicPlayerGUI extends JFrame {
         addPlaybackBtns();
     }
 
+    // ツールバーを追加
     private void addToolbar() {
         JToolBar toolBar = new JToolBar();
         toolBar.setBounds(0, 0, getWidth(), 20);
@@ -207,6 +210,7 @@ public class MusicPlayerGUI extends JFrame {
         add(toolBar);
     }
 
+    // プレイバックボタンを追加
     private void addPlaybackBtns() {
         playbackBtns = new JPanel();
         playbackBtns.setBounds(0, 435, getWidth() - 10, 80);
@@ -279,11 +283,13 @@ public class MusicPlayerGUI extends JFrame {
         playbackSlider.setValue(frame);
     }
 
+    // 曲のタイトルとアーティストを更新するために使用
     public void updateSongTitleAndArtist(Song song) {
         songTitle.setText(song.getSongTitle());
         songArtist.setText(song.getSongArtist());
     }
 
+    // プレイバックスライダーを更新するために使用
     public void updatePlaybackSlider(Song song) {
         // スライダーの最大数を更新
         playbackSlider.setMaximum(song.getMp3File().getFrameCount());
@@ -308,6 +314,7 @@ public class MusicPlayerGUI extends JFrame {
         playbackSlider.setPaintLabels(true);
     }
 
+    // 再生ボタンをオンにして一時停止ボタンをオフにする
     public void enablePauseButtonDisablePlayButton() {
         // playbackBtnsパネルからプレイバックボタンへの参照を取得
         JButton playButton = (JButton) playbackBtns.getComponent(1);
@@ -322,6 +329,7 @@ public class MusicPlayerGUI extends JFrame {
         pauseButton.setEnabled(true);
     }
 
+    // 一時停止ボタンをオンにして再生ボタンをオフにする
     public void enablePlayButtonDisablePauseButton() {
         // playbackBtnsパネルからプレイバックボタンへの参照を取得
         JButton playButton = (JButton) playbackBtns.getComponent(1);
@@ -336,6 +344,7 @@ public class MusicPlayerGUI extends JFrame {
         pauseButton.setEnabled(false);
     }
 
+    // 画像を読み込むためのヘルパーメソッド
     private ImageIcon loadImage(String imagePath) {
         try {
             // 指定されたパスから画像を読み込む

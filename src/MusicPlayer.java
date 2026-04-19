@@ -5,6 +5,7 @@ import javazoom.jl.player.advanced.PlaybackListener;
 import java.io.*;
 import java.util.ArrayList;
 
+// 音楽プレーヤーのロジックを処理するクラス
 public class MusicPlayer extends PlaybackListener {
     // isPausedをより同期的に更新
     private static final Object playSignal = new Object();
@@ -51,6 +52,7 @@ public class MusicPlayer extends PlaybackListener {
         this.musicPlayerGUI = musicPlayerGUI;
     }
 
+    // 曲をロード
     public void loadSong(Song song) {
         currentSong = song;
         playlist = null;
@@ -74,6 +76,7 @@ public class MusicPlayer extends PlaybackListener {
         }
     }
 
+    // プレイリストをロード
     public void loadPlaylist(File playlistFile) {
         playlist = new ArrayList<>();
 
@@ -116,6 +119,7 @@ public class MusicPlayer extends PlaybackListener {
         }
     }
 
+    // 曲を一時停止
     public void pauseSong() {
         if(advancedPlayer != null) {
             // isPausedフラグを更新
@@ -126,6 +130,7 @@ public class MusicPlayer extends PlaybackListener {
         }
     }
 
+    // 曲を止める
     public void stopSong() {
         if(advancedPlayer != null) {
             advancedPlayer.stop();
@@ -134,6 +139,7 @@ public class MusicPlayer extends PlaybackListener {
         }
     }
 
+    // 次の曲に進む
     public void nextSong() {
         // プレイリストがない場合は、次の曲に進まない
         if(playlist == null) return;
@@ -168,6 +174,7 @@ public class MusicPlayer extends PlaybackListener {
         playCurrentSong();
     }
 
+    // 前の曲に戻る
     public void prevSong() {
         // プレイリストがない場合は、次の曲に進まない
         if(playlist == null) return;
@@ -202,6 +209,7 @@ public class MusicPlayer extends PlaybackListener {
         playCurrentSong();
     }
 
+    // 現在の曲を再生
     public void playCurrentSong() {
         if(currentSong == null) return;
 
@@ -291,6 +299,7 @@ public class MusicPlayer extends PlaybackListener {
          }).start();
      }
     
+    // PlaybackListenerのメソッドをオーバーライドして、曲の再生状態を追跡
     @Override
     public void playbackStarted(PlaybackEvent evt) {
         // このメソッドは曲が始まったときに呼び出されます
@@ -300,6 +309,7 @@ public class MusicPlayer extends PlaybackListener {
         pressedPrev = false;
     }
 
+    // 曲の再生が終了したときに呼び出されるメソッドをオーバーライド
     @Override
     public void playbackFinished(PlaybackEvent evt) {
         // このメソッドは曲の終わりまたはプレーヤーが閉じられたときに呼び出されます
